@@ -32,6 +32,7 @@ class TodoList extends React.Component {
               onClick={() => this.toggleTodo(todo.id)}
               className='list-item'
             >
+            {todo.text}
             </p>
           ))}
         </div>

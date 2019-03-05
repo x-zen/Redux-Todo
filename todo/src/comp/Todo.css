@@ -1,12 +1,18 @@
 .list-item {
   display: flex;
-  height: 2rem;
   max-width: 500px;
   margin: 0.5rem auto;
   border: 1px solid green;
-  box-shadow: 10px 5px 7px black;
-  transition: 1.5s.
+  box-shadow: 8px 5px 7px black;
+  transition: 1s;
+  justify-content: center;
+}
 
+.list-item:hover {
+  background-color: green;
+  color: black;
+  text-decoration: line-through;
+  box-shadow: 12px 7px 9px black;
 }
 
 i {
@@ -15,5 +21,5 @@ i {
 }
 
 i:hover {
-  color: green;
+  color: green
 }
