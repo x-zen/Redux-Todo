@@ -1,3 +1,7 @@
+.todo-list{
+
+}
+
 .list-item {
   display: flex;
   max-width: 500px;
@@ -5,7 +9,7 @@
   border: 1px solid green;
   box-shadow: 8px 5px 7px black;
   transition: 1s;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .list-item:hover {

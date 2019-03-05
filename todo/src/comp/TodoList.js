@@ -28,12 +28,13 @@ class TodoList extends React.Component {
       <>
         <div className='todo-list'>
           {this.props.todoList.map(todo => (
-            <p key={todo.id}
+            <h4 key={todo.id}
               onClick={() => this.toggleTodo(todo.id)}
               className='list-item'
             >
             {todo.text}
-            </p>
+            {todo.completed && <i className="fas fa-check-circle" />}
+            </h4>
           ))}
         </div>
         <input
