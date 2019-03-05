@@ -37,14 +37,16 @@ class TodoList extends React.Component {
             </h4>
           ))}
         </div>
-        <input
-          type='text'
-          name='newTodo'
-          value={this.state.newTodo}
-          onChange={this.handleChanges}
-          placeholder='Add new ask...'
-        />
-        <button onClick={this.addTodo}>Add Task!</button>
+        <div className='form-box'>
+          <input
+            type='text'
+            name='newTodo'
+            value={this.state.newTodo}
+            onChange={this.handleChanges}
+            placeholder='Add new ask...'
+          />
+          <button onClick={this.addTodo}>Add Task!</button>
+        </div>
       </>
     );
   }

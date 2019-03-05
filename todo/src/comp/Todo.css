@@ -1,29 +1,69 @@
-.todo-list{
+.App {
+  max-width: 500px;
+  border-radius: 10px;
+  background-color: lightgrey;
+  margin: 1rem auto;
+  box-shadow: inset 10px 5px 7px black;
+  padding: 1rem;
+}
 
+h1 {
+  text-shadow: 1.4px 1.4px grey;
 }
 
 .list-item {
   display: flex;
-  max-width: 500px;
+  width: 85%;
   margin: 0.5rem auto;
   border: 1px solid green;
   box-shadow: 8px 5px 7px black;
   transition: 1s;
   justify-content: space-between;
+  font-size: 1rem;
+  padding: 0.5rem;
 }
 
 .list-item:hover {
-  background-color: green;
-  color: black;
-  text-decoration: line-through;
+  background-color: black;
+  color: green;
   box-shadow: 12px 7px 9px black;
 }
 
 i {
   font-size: 1rem;
-  margin: 1rem;
 }
 
-i:hover {
-  color: green
+h1 i {
+  margin-left: 1rem;
+}
+
+h1 i:hover {
+  color: green;
+}
+
+.form-box {
+  padding: 0.5rem;
+  border: 1px solid green;
+  box-shadow: 8px 5px 7px black;
+  margin: 0.5rem ;
+  transition: 1s;
+}
+
+input {
+  width: 65%;
+}
+
+button {
+  width: 20%;
+  background-color: black;
+  color: green;
+  margin: 3px;
+  border: 1.5px solid green;
+  transition: 1s;
+}
+
+button:hover {
+  background-color: green;
+  color: black;
+  border: 1.5px solid black;
 }
