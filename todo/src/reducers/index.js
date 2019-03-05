@@ -1,27 +1,15 @@
-import {ADD_TODO, TOGGLE_TODO, UPDATE_TITLE} from '../actions';
+import { UPDATE_TITLE, ADD_TODO, TOGGLE_TODO } from '../actions';
 
-const initiaState = {
+const initialState = {
   title: 'Dev Day Plan',
   todos: [
-    {
-      id:999,
-      text: 'Sleep',
-      completed: true
-    },
-    {
-      id: 998,
-      text: 'Code',
-      completed: false
-    },
-    {
-      id: 997,
-      text: 'Repeat',
-      completed: true
-    }
+    { id:999, text: 'Sleep', completed: true },
+    { id: 998, text: 'Code', completed: false },
+    { id: 997, text: 'Repeat', completed: true }
   ]
 };
 
-function reducer(state = initiaState, action) {
+function reducer(state = initialState, action) {
   switch (action.type) {
     case UPDATE_TITLE:
       return {
@@ -29,22 +17,33 @@ function reducer(state = initiaState, action) {
         title: action.payload
       };
 
-    case 'ADD_TODO':
+    case ADD_TODO:
       const newTodo = {
-        id: action.id,
-        text: action.text,
+        text: action.payload,
+        id: Date.now(),
         completed: false
       };
       return {
         ...state,
         todos: [...state.todos, newTodo]
       }
-    case 'TOGGLE_TODO':
-      return state.map(todo =>
-        todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
-      )
-    default:
-      return state
+
+    case TOGGLE_TODO:
+      return{
+        ...state,
+        todos: state.todos.map(todo => {
+          if (todo.id === action.payload) {
+            return {
+              ...todo,
+              completed: !todo.completed
+          };
+        }
+          return todo;
+      })
+    };
+
+  default:
+      return state;
   }
 }
 

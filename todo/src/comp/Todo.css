@@ -1,10 +1,19 @@
 .list-item {
+  display: flex;
+  height: 2rem;
   max-width: 500px;
-  margin: 1rem;
+  margin: 0.5rem auto;
   border: 1px solid green;
-  color: green;
-  background-color: black;
   box-shadow: 10px 5px 7px black;
   transition: 1.5s.
 
+}
+
+i {
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+i:hover {
+  color: green;
 }

@@ -20,19 +20,19 @@ class TodoList extends React.Component {
   };
 
   toggleTodo = id => {
-    this.props.toggleMember(id);
+    this.props.toggleTodo(id);
   };
 
   render() {
     return (
       <>
-        <div class='todo-list'>
-          {this.props.todos.map(todo => (
-            <h3 key={todo.id}
+        <div className='todo-list'>
+          {this.props.todoList.map(todo => (
+            <p key={todo.id}
               onClick={() => this.toggleTodo(todo.id)}
-              class='list-item'
+              className='list-item'
             >
-            </h3>
+            </p>
           ))}
         </div>
         <input

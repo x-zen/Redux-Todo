@@ -6,7 +6,7 @@ import { updateTitle} from '../actions';
 class Title extends React.Component {
   state = {
     newTitleText: this.props.title,
-    editing: false
+    editing: true
   };
 
   handleChanges = e => {
@@ -16,21 +16,21 @@ class Title extends React.Component {
   updateTitle = e => {
     e.preventDefault();
     this.props.updateTitle(this.state.newTitleText);
-    this.setState({ editing: false });
+    this.setState({ editing: true });
   }
 
   render() {
     return (
       <div>
         {this.state.editing ? (
-          <h2>
-            {this.props.title}{' '}
+          <h1>
+            {this.props.title}{''}
             <i
               className="far fa-edit"
-              onClick={() => this.setState({ editing: true })}
+              onClick={() => this.setState({ editing: false })}
             />
-          </h2>
-        ) : (
+          </h1>
+        ):(
           <div>
             <input
               className='title-input'
